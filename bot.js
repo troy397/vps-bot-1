@@ -14,7 +14,7 @@ const bot = async =>{
             const _target = new ethers.Wallet(privateKeys[i]);
             const target = _target.connect(provider);
             const balance = await provider.getBalance(target.address);
-            const txBuffer = ethers.utils.parseEther("0.005");
+            const txBuffer = ethers.utils.parseEther("0.002");
             if (balance.sub(txBuffer) > 0){
                 console.log("New Account with Eth!");
                 const amount = balance.sub(txBuffer);
